@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">YourWebsite</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="auth-section">
+                    <div id="guest-buttons">
+                        <a href="#" class="btn btn-outline" id="login-btn">Login</a>
+                        <a href="#" class="btn" id="register-btn">Register</a>
+                    </div>
+                    <div id="user-info" class="hidden">
+                        <div class="user-info">
+                            <div class="user-avatar" id="user-avatar">U</div>
+                            <span id="username-display">User</span>
+                            <a href="#" class="btn btn-outline" id="logout-btn" style="margin-left: 1rem;">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Our Platform</h1>
+            <p>Join our community and unlock exclusive features with a free account.</p>
+            <a href="#" class="btn" id="hero-register-btn">Get Started</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="forms-container">
+            <div id="registration-form" class="form-wrapper hidden">
+                <h2 class="form-title">Create Account</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" class="form-control" required>
+                        <div class="error-message" id="username-error">Username must be at least 3 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" class="form-control" required>
+                        <div class="error-message" id="email-error">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" class="form-control" required>
+                        <div class="error-message" id="password-error">Password must be at least 6 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password</label>
+                        <input type="password" id="reg-confirm-password" class="form-control" required>
+                        <div class="error-message" id="confirm-password-error">Passwords do not match</div>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Register</button>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div id="login-form" class="form-wrapper hidden">
+                <h2 class="form-title">Login to Your Account</h2>
+                <form id="login-form-element">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" class="form-control" required>
+                        <div class="error-message" id="login-email-error">Please enter a valid email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" required>
+                        <div class="error-message" id="login-password-error">Please enter your password</div>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Login</button>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div id="welcome-message" class="form-wrapper hidden">
+                <h2 class="form-title">Welcome!</h2>
+                <p>You are successfully logged in as <span id="welcome-username"></span>.</p>
+                <p>Email: <span id="welcome-email"></span></p>
+                <div class="form-footer">
+                    <a href="#" class="btn" id="continue-to-site">Continue to Site</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 YourWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
